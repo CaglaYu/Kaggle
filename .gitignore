@@ -1,0 +1,11 @@
+autosave/
+config/
+lsp_paths/
+plugins/
+spyder.lock/
+help
+history_internal.py
+langconfig
+onlinehelp
+pdb_history.sqlite
+template.py
