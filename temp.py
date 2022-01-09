@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import mean_absolute_error
 
 iowa_file_path = 'train.csv'
 
@@ -18,4 +19,5 @@ X = df[["LotArea","YearBuilt","1stFlrSF","2ndFlrSF","FullBath","BedroomAbvGr","T
 my_model = DecisionTreeRegressor(random_state=1)
 my_model.fit(X, y)
 print(X.head())
-print(my_model.predict(X.head()))
+my_predictions = my_model.predict(X)
+print(mean_absolute_error(y, my_predictions))
